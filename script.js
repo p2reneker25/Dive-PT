@@ -9,14 +9,14 @@ var lng = document.getElementById("lgn").value
 var src = "sg"
 var stuffToGet=['windSpeed', 'waveHeight', 'swellHeight'];
 document.getElementById("image").src = "images/wait.png"
-//Check for blank data
+//Check for blank data or invalid characters
 if(/\p{L}/u.test(lng) || /\p{L}/u.test(lat) || lng == "" || lat=="")
 {
   document.getElementById("data").innerHTML = "ERROR: Location error. Check lat/lng and try again!"
   document.getElementById("image").src = "images/warn.png"
 }
 
-fetch(`https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=${stuffToGet}&source=${src}&`, {
+fetch(`https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=${stuffToGet}&source=${src}&`, { //Developed by stormglass.io (API I'm using for sea conditions)
   headers: {
     'Authorization': '2257fbce-4196-11ec-8fdf-0242ac130002-2257fc3c-4196-11ec-8fdf-0242ac130002'
      
