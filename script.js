@@ -17,7 +17,7 @@ if(/\p{L}/u.test(long) || /\p{L}/u.test(lat) || /\p{L}/u.test(wind) || /\p{L}/u.
   document.getElementById("image").src = "images/warn.png"
   return
 }
-if(long != "" && lat != "")
+if(long != "" || lat != "")
 {
   if(wind != "" || wave != "" || swell != "")//both are full
   {
