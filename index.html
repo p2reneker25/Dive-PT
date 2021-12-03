@@ -14,6 +14,7 @@
          Location of dive site:
          <br>
          <table>
+           <tbody>
             <tr>
                <td>
                   <p1 style="letter-spacing: 1.38px">Latitude:</p1>
@@ -22,10 +23,17 @@
                <td>
                   Longitude: 
                <td> <input type="text" id = "lgn" value="">
-         </table>
-         Or, input your own sea conditions:
-         <table>
+           <tr>
+               <td colspan = "2" style="text-align:center"> Or input your own sea conditions
+                
+               </td>
+          </tr>
+            
+         </tbody>
+            
+         <tbody>
             <tr>
+             
                <td>
                   <p1 >Wave Height:</p1>
                <td><input type ="text" id ="wave" value="">
@@ -37,6 +45,7 @@
                <td>
                   Swell Height: 
                <td> <input type="text" id = "swell" value="">
+         </tbody>
          </table>
          <br>
          <input type="button" value="Check Conditions" onclick="update()">
