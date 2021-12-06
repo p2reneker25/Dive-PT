@@ -24,7 +24,7 @@ function update() {
 			return
 		}
 
-		alert("go through")
+		
 		getData(lat, long)
 		return
 	} else {
@@ -34,7 +34,7 @@ function update() {
 			document.getElementById("image").src = "images/warn.png"
 			return
 		}
-		alert("go through II")
+		
 		decision(wave, wind, swell)
 	}
 }
